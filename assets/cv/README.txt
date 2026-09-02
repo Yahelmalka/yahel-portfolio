@@ -14,3 +14,5 @@ Expected filenames:
 - yahel-malka-priority-cv.pdf
 - yahel-malka-product-manager-cv.pdf
 - yahel-malka-project-manager-cv.pdf
+- yahel-malka-cybersecurity-cv.pdf
+- yahel-malka-ai-cv.pdf

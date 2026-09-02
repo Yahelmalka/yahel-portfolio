@@ -30,7 +30,11 @@ const SKILL_CATEGORIES = {
   },
   data: {
     title: "Data & Analytics",
-    items: ["Excel", "Tableau", "Data Analysis"]
+    items: ["Excel", "Tableau", "Data Analysis", "Data Visualization"]
+  },
+  networking: {
+    title: "Networking",
+    items: ["TCP/IP", "HTTP/HTTPS", "Client-Server"]
   },
   tools: {
     title: "Tools",
@@ -870,5 +874,135 @@ const ROLES = {
     contactIntro: "I'm looking for junior project-manager roles in a technical environment.",
     cvPath: "assets/cv/yahel-malka-project-manager-cv.pdf",
     cvFilename: "yahel-malka-project-manager-cv.pdf"
+  },
+
+  cybersecurity: {
+    id: "cybersecurity",
+    label: "Junior Cybersecurity",
+    path: "cybersecurity/",
+    pageTitle: "Yahel Malka | Junior Cybersecurity Portfolio",
+    seoDescription: "Yahel Malka. Computer Science graduate with troubleshooting, APIs, databases, debugging and networking fundamentals, looking for a junior cybersecurity role.",
+    eyebrow: "COMPUTER SCIENCE GRADUATE · CYBERSECURITY",
+    headline: "Junior Cybersecurity",
+    headlineLead: "Yahel Malka",
+    headlineAccent: "Junior Cybersecurity",
+    professionalTitle: "Computer Science Graduate | Junior Cybersecurity",
+    subheadline: "Troubleshooting, APIs and careful system checks",
+    introduction: "Computer Science graduate with hands-on work investigating issues across frontend, backend, REST APIs and databases. I don't have a formal cybersecurity title yet. I want to grow in a junior security role using the same habits: checking details, tracing how systems connect, and finding why something failed.",
+    primaryCta: { label: "View relevant work", tab: "projects" },
+    secondaryCta: { label: "Skills dashboard", tab: "skills" },
+    quickFacts: [
+      { value: "Debug", label: "APIs · SQL · systems" },
+      { value: "Net", label: "TCP/IP · HTTP/HTTPS" },
+      { value: "Test", label: "Postman · E2E checks" }
+    ],
+    skillCategoryOrder: ["networking", "apis", "testing", "programming", "professional", "tools", "web", "data"],
+    highlightedCategory: "networking",
+    highlightedSkills: [
+      "TCP/IP",
+      "HTTP/HTTPS",
+      "Client-Server",
+      "REST APIs",
+      "MySQL",
+      "Debugging",
+      "API Testing",
+      "Software Troubleshooting",
+      "Problem Solving",
+      "Attention to Detail"
+    ],
+    learningSkills: [],
+    projectOrder: ["bin", "rental"],
+    highlightedProjectDetails: {
+      bin: {
+        summary: "An end-to-end application where I checked how the interface, REST APIs and MySQL stay in sync, then found and fixed failures across those layers.",
+        bullets: [
+          "Built backend pieces with Node.js, Express and MySQL",
+          "Connected frontend and backend through REST APIs",
+          "Checked API and data flows with Postman",
+          "Debugged issues across the interface, API and database"
+        ],
+        tags: ["REST APIs", "Debugging", "MySQL", "Postman"]
+      },
+      rental: {
+        summary: "A wallet-connected rental flow where I checked signing, payments and contract state, including cases that should fail.",
+        bullets: [
+          "Built Solidity contracts for owner and tenant workflows",
+          "Integrated the interface with blockchain interactions",
+          "Tested end-to-end contract and application flows",
+          "Debugged integration issues between system components"
+        ],
+        tags: ["Troubleshooting", "Debugging", "E2E Testing"]
+      }
+    },
+    focusAreas: ["Technical Troubleshooting", "APIs", "Databases", "Debugging", "Networking Fundamentals"],
+    preferredRoles: ["Junior Cybersecurity"],
+    contactIntro: "I'm looking for junior cybersecurity and information-security roles.",
+    cvPath: "assets/cv/yahel-malka-cybersecurity-cv.pdf",
+    cvFilename: "yahel-malka-cybersecurity-cv.pdf"
+  },
+
+  "ai-engineer": {
+    id: "ai-engineer",
+    label: "Junior AI Solution Engineer",
+    path: "ai-engineer/",
+    pageTitle: "Yahel Malka | Junior AI Solution Engineer Portfolio",
+    seoDescription: "Yahel Malka. Computer Science graduate with Python, SQL, data analysis and an AI Business Analytics course, looking for a junior AI solutions role.",
+    eyebrow: "COMPUTER SCIENCE GRADUATE · AI SOLUTIONS",
+    headline: "Junior AI Solution Engineer",
+    headlineLead: "Yahel Malka",
+    headlineAccent: "Junior AI Solution Engineer",
+    professionalTitle: "Computer Science Graduate | Junior AI Solution Engineer",
+    subheadline: "Python, data analysis and reliable software",
+    introduction: "Computer Science graduate with project work in Python, SQL, APIs and end-to-end testing, plus an HIT AI Business Analytics course. I don't have a formal AI-engineer title yet. I want to grow in a junior AI solutions role using the same work: understanding data, building software, and checking that a flow is reliable.",
+    primaryCta: { label: "View relevant work", tab: "projects" },
+    secondaryCta: { label: "Skills dashboard", tab: "skills" },
+    quickFacts: [
+      { value: "Python", label: "SQL · data work" },
+      { value: "HIT", label: "AI Business Analytics" },
+      { value: "Build", label: "APIs · testing · debug" }
+    ],
+    skillCategoryOrder: ["programming", "data", "apis", "testing", "web", "professional", "tools"],
+    highlightedCategory: "data",
+    highlightedSkills: [
+      "Python",
+      "SQL",
+      "Data Analysis",
+      "Excel",
+      "Tableau",
+      "Data Visualization",
+      "REST APIs",
+      "Debugging",
+      "Problem Solving",
+      "Analytical Thinking"
+    ],
+    learningSkills: [],
+    projectOrder: ["bin", "rental"],
+    highlightedProjectDetails: {
+      bin: {
+        summary: "A full-stack application where I connected React, Node.js, REST APIs and MySQL, then checked the data flow and fixed issues across those layers.",
+        bullets: [
+          "Built backend functionality and REST API endpoints",
+          "Managed application data flows and MySQL records",
+          "Tested APIs and end-to-end flows with Postman",
+          "Debugged issues across frontend, backend, API and database"
+        ],
+        tags: ["Python", "SQL", "REST APIs", "MySQL"]
+      },
+      rental: {
+        summary: "A group software project with owner and tenant workflows. I helped connect the interface to contract logic and checked the full flow.",
+        bullets: [
+          "Built Solidity contracts for owner and tenant workflows",
+          "Integrated frontend pieces with blockchain interactions",
+          "Implemented rental, payment and contract flows",
+          "Tested the full workflow and fixed integration issues"
+        ],
+        tags: ["Debugging", "APIs", "Collaboration"]
+      }
+    },
+    focusAreas: ["Python", "SQL", "Data Analysis", "APIs", "Debugging"],
+    preferredRoles: ["Junior AI Solution Engineer"],
+    contactIntro: "I'm looking for junior AI solutions roles.",
+    cvPath: "assets/cv/yahel-malka-ai-cv.pdf",
+    cvFilename: "yahel-malka-ai-cv.pdf"
   }
 };
