@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Yahel Malka | Role link manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="orb orb-one"></div>
+  <div class="links-page">
+    <p class="eyebrow">PRIVATE TOOL</p>
+    <h1>Role links.</h1>
+    <p class="lead">Copy the GitHub Pages URL for a role, or open a local preview. This page is not in the public navigation.</p>
+    <div class="links-table-wrap">
+      <table class="links-table">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Page title</th>
+            <th>Relative URL</th>
+            <th>GitHub Pages URL</th>
+            <th>Actions</th>
+            <th>CV status</th>
+            <th>CV filename</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="role-config.js"></script>
+  <script>
+    const rows = document.getElementById("rows");
+
+    async function cvStatus(path) {
+      if (!path) return false;
+      try {
+        const response = await fetch(path, { method: "HEAD" });
+        return response.ok;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    async function render() {
+      const entries = Object.values(ROLES);
+      for (const role of entries) {
+        const relative = role.path ? `./${role.path}` : "./";
+        const full = `${SITE.pagesBase}/${role.path}`;
+        const available = await cvStatus(role.cvPath);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><b>${role.label}</b></td>
+          <td>${role.pageTitle}</td>
+          <td><code>${relative}</code></td>
+          <td><code>${full}</code></td>
+          <td class="links-actions">
+            <button type="button" data-copy="${full}">Copy Link</button>
+            <a href="${relative}" target="_blank" rel="noreferrer">Open Preview</a>
+          </td>
+          <td class="${available ? "cv-ok" : "cv-missing"}">${available ? "Available" : "Missing"}</td>
+          <td><code>${role.cvFilename || "-"}</code></td>
+        `;
+        rows.appendChild(tr);
+      }
+    }
+
+    async function copyText(value) {
+      if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(value);
+          return true;
+        } catch (error) {
+          /* fall through to execCommand */
+        }
+      }
+      const field = document.createElement("textarea");
+      field.value = value;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.left = "-9999px";
+      document.body.appendChild(field);
+      field.select();
+      const ok = document.execCommand("copy");
+      document.body.removeChild(field);
+      return ok;
+    }
+
+    document.addEventListener("click", async (event) => {
+      const button = event.target.closest("[data-copy]");
+      if (!button) return;
+      const ok = await copyText(button.dataset.copy);
+      button.textContent = ok ? "Copied" : "Copy failed";
+      button.classList.toggle("copied", ok);
+      setTimeout(() => {
+        button.textContent = "Copy Link";
+        button.classList.remove("copied");
+      }, 1600);
+    });
+
+    render();
+  </script>
+</body>
+</html>

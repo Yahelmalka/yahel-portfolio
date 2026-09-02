@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yahel Malka | QA & Software Portfolio</title>
+  <meta name="description" content="Yahel Malka. Computer Science graduate with hands-on project experience in software development, QA, APIs and full-stack systems." />
+  <meta property="og:title" content="Yahel Malka | QA & Software Portfolio" />
+  <meta property="og:description" content="Yahel Malka. Computer Science graduate with hands-on project experience in software development, QA, APIs and full-stack systems." />
+  <meta property="og:image" content="https://Yahelmalka.github.io/yahel-portfolio/assets/Yahel.profile.pic.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://Yahelmalka.github.io/yahel-portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yahel Malka | QA & Software Portfolio" />
+  <meta name="twitter:description" content="Yahel Malka. Computer Science graduate with hands-on project experience in software development, QA, APIs and full-stack systems." />
+  <meta name="twitter:image" content="https://Yahelmalka.github.io/yahel-portfolio/assets/Yahel.profile.pic.png" />
+  <link rel="canonical" href="https://Yahelmalka.github.io/yahel-portfolio/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <header class="nav-wrap">
+    <a class="brand" href="#home" data-tab="home"><span>YM</span> Yahel Malka</a>
+    <button class="menu" type="button" aria-label="Open navigation">☰</button>
+    <nav>
+      <a class="active" href="#home" data-tab="home">Home</a>
+      <a href="#projects" data-tab="projects">Projects</a>
+      <a href="#skills" data-tab="skills">Skills</a>
+      <a href="#experience" data-tab="experience">Experience</a>
+      <a href="#contact" data-tab="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view active hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" data-bind="eyebrow">COMPUTER SCIENCE GRADUATE · QA & SOFTWARE</p>
+        <h1 data-bind="headline">Yahel<br><em>Malka.</em></h1>
+        <p class="lead" data-bind="introduction">I'm Yahel Malka, a Computer Science graduate. I build software, test it and debug it when something doesn't work as expected.</p>
+        <div class="actions" data-bind="actions">
+          <a class="btn primary" href="#projects" data-tab="projects">Explore my work</a>
+          <a class="btn ghost" href="https://github.com/Yahelmalka" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+        <div class="quick" data-bind="quick">
+          <div><b>B.Sc.</b><span>Computer Science</span></div>
+          <div><b>QA</b><span>Manual & API Testing</span></div>
+          <div><b>Full Stack</b><span>React · Node · MySQL</span></div>
+        </div>
+      </div>
+      <div class="portrait-wrap reveal">
+        <div class="orbit"></div>
+        <img data-bind="portrait" src="assets/Yahel.profile.pic.png" alt="Professional portrait of Yahel Malka">
+        <span class="status">● Open to opportunities</span>
+      </div>
+    </section>
+
+    <section class="view page" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Selected<br><em>projects.</em></h2>
+        <p>A waste-bin platform and a rental DApp. I built, tested and debugged both.</p>
+      </div>
+      <div data-bind="projects"></div>
+    </section>
+
+    <section class="view page" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">SKILLS DASHBOARD</p>
+        <h2>Technical<br><em>skills.</em></h2>
+        <p>The tools I use to build, test and fix software. Gold marks the skills this version focuses on.</p>
+      </div>
+      <div class="skill-grid" data-bind="skills"></div>
+    </section>
+
+    <section class="view page" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">BACKGROUND</p>
+        <h2>Education &<br><em>experience.</em></h2>
+        <p data-bind="experience-intro">Computer Science at HIT, IDF team command, and a short operations role coordinating requests under pressure.</p>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>EDUCATION</span>
+          <h3>B.Sc. in Computer Science</h3>
+          <p class="meta">HIT · 2023-2026</p>
+          <p>Coursework in software development, data structures, databases, systems and problem solving, plus hands-on projects.</p>
+        </article>
+        <article>
+          <span>EDUCATION</span>
+          <h3>AI Business Analytics</h3>
+          <p class="meta">HIT · 2025</p>
+          <p>Hands-on work with data analysis, Excel, Tableau and visualization, including analysis of user behavior and business trends.</p>
+        </article>
+        <article>
+          <span>EXPERIENCE</span>
+          <h3>Team Commander</h3>
+          <p class="meta">Israel Defense Forces (IDF) · 2021-2022</p>
+          <p>Managed a team of 14 soldiers, overseeing daily operations and task execution in a high-pressure environment.</p>
+          <ul>
+            <li>Planned, scheduled and monitored multiple assignments under changing conditions</li>
+            <li>Applied structured problem-solving and decision-making under pressure</li>
+            <li>Completed advanced leadership training through the IDF Commanders Course</li>
+          </ul>
+        </article>
+        <article>
+          <span>EXPERIENCE</span>
+          <h3>Operations Coordinator</h3>
+          <p class="meta">Civilian Operations Center · Oct-Dec 2023</p>
+          <p>Coordinated operational requests, logistics and resource allocation while communicating with international stakeholders, investors and donors.</p>
+          <ul>
+            <li>Handled multiple requests at once while keeping communication clear and timely</li>
+            <li>Prioritized work in a dynamic environment that required rapid problem-solving</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="view page contact" id="contact">
+      <div>
+        <p class="eyebrow">LET’S CONNECT</p>
+        <h2>Get in<br><em>touch.</em></h2>
+        <p data-bind="contact-intro">I'm looking for junior QA, software and technical roles.</p>
+      </div>
+      <div class="contact-card">
+        <a href="mailto:Yahelmalka28@gmail.com"><span>Email</span><b>Yahelmalka28@gmail.com ↗</b></a>
+        <a href="tel:+972542560997"><span>Phone</span><b>054-256-0997 ↗</b></a>
+        <a href="https://www.linkedin.com/in/yahel-malka" target="_blank" rel="noreferrer"><span>LinkedIn</span><b>yahel-malka ↗</b></a>
+        <a href="https://github.com/Yahelmalka" target="_blank" rel="noreferrer"><span>GitHub</span><b>@Yahelmalka ↗</b></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Yahel Malka</span>
+    <span>Portfolio 2026</span>
+  </footer>
+
+  <script src="role-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
