@@ -114,7 +114,7 @@ git push -u origin main
 | Junior Product Manager | `/product-manager/` | https://Yahelmalka.github.io/yahel-portfolio/product-manager/ |
 | Junior Project Manager | `/project-manager/` | https://Yahelmalka.github.io/yahel-portfolio/project-manager/ |
 | Junior Cybersecurity | `/cybersecurity/` | https://Yahelmalka.github.io/yahel-portfolio/cybersecurity/ |
-| Junior AI Solution Engineer | `/ai-engineer/` | https://Yahelmalka.github.io/yahel-portfolio/ai-engineer/ |
+| Junior AI Solution Engineer | `/ai-engineer/` or `/ai/` | https://Yahelmalka.github.io/yahel-portfolio/ai-engineer/ |
 
 ## 9. `links.html`
 

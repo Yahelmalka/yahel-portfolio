@@ -12,6 +12,8 @@ function getRoleId() {
 }
 
 function getAssetPrefix() {
+  if (window.PORTFOLIO_ROLE) return "../";
+
   const roleId = getRoleId();
   const path = location.pathname.replace(/\\/g, "/");
   if (roleId !== "general" && (path.includes(`/${roleId}/`) || path.endsWith(`/${roleId}`))) {
