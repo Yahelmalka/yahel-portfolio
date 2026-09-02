@@ -12,3 +12,5 @@ Expected filenames:
 - yahel-malka-support-cv.pdf
 - yahel-malka-product-operations-cv.pdf
 - yahel-malka-priority-cv.pdf
+- yahel-malka-product-manager-cv.pdf
+- yahel-malka-project-manager-cv.pdf

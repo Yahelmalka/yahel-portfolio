@@ -745,5 +745,130 @@ const ROLES = {
     contactIntro: "I'm looking for junior Priority or ERP developer roles.",
     cvPath: "assets/cv/yahel-malka-priority-cv.pdf",
     cvFilename: "yahel-malka-priority-cv.pdf"
+  },
+
+  "product-manager": {
+    id: "product-manager",
+    label: "Junior Product Manager",
+    path: "product-manager/",
+    pageTitle: "Yahel Malka | Junior Product Manager Portfolio",
+    seoDescription: "Yahel Malka. Computer Science graduate with project work, user flows, APIs, data analysis and operations experience, looking for a junior product role.",
+    eyebrow: "COMPUTER SCIENCE GRADUATE · PRODUCT",
+    headline: "Junior Product Manager",
+    headlineLead: "Yahel Malka",
+    headlineAccent: "Junior Product Manager",
+    professionalTitle: "Computer Science Graduate | Junior Product Manager",
+    subheadline: "User needs, application flows and clear communication",
+    introduction: "Computer Science graduate with hands-on project work turning requirements into application flows. I built and tested user-facing features, APIs and data views. I don't have a formal product-manager title yet. I want to grow in a junior product role using the same work: understanding what users need, checking that a flow works, and coordinating with others.",
+    primaryCta: { label: "View relevant work", tab: "projects" },
+    secondaryCta: { label: "Experience", tab: "experience" },
+    quickFacts: [
+      { value: "Flows", label: "Requirements to features" },
+      { value: "Data", label: "Excel · Tableau · SQL" },
+      { value: "Ops", label: "Coordination under pressure" }
+    ],
+    skillCategoryOrder: ["professional", "data", "web", "apis", "testing", "tools", "programming"],
+    highlightedCategory: "professional",
+    highlightedSkills: [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Attention to Detail",
+      "Customer Communication",
+      "Teamwork",
+      "Data Analysis",
+      "Excel",
+      "Independent Learning"
+    ],
+    learningSkills: [],
+    projectOrder: ["bin", "rental"],
+    highlightedProjectDetails: {
+      bin: {
+        summary: "A waste-bin platform where I turned functional needs into features: bin data, locations, fill levels and collection routes.",
+        bullets: [
+          "Turned functional requirements into application features and user flows",
+          "Built user-facing screens for managing bin data, locations and fill levels",
+          "Connected frontend, backend, REST APIs and MySQL as one product",
+          "Tested end-to-end flows and checked issues across the system"
+        ],
+        tags: ["User Flows", "React.js", "REST APIs", "MySQL"]
+      },
+      rental: {
+        summary: "A rental product for owners and tenants. I helped turn those two user needs into deploy, sign, lock and payment flows.",
+        bullets: [
+          "Turned owner and tenant requirements into application workflows",
+          "Worked with teammates on rental and payment flows",
+          "Integrated the interface with Solidity contracts",
+          "Tested the full workflow and fixed integration issues"
+        ],
+        tags: ["User Flows", "Collaboration", "Testing"]
+      }
+    },
+    focusAreas: ["Requirements Analysis", "User Flows", "Data Analysis", "Cross-team work"],
+    preferredRoles: ["Junior Product Manager"],
+    contactIntro: "I'm looking for junior product-manager roles.",
+    cvPath: "assets/cv/yahel-malka-product-manager-cv.pdf",
+    cvFilename: "yahel-malka-product-manager-cv.pdf"
+  },
+
+  "project-manager": {
+    id: "project-manager",
+    label: "Junior Project Manager",
+    path: "project-manager/",
+    pageTitle: "Yahel Malka | Junior Project Manager Portfolio",
+    seoDescription: "Yahel Malka. Computer Science graduate with team leadership, operations coordination and end-to-end software project work, looking for a junior project-manager role.",
+    eyebrow: "COMPUTER SCIENCE GRADUATE · PROJECT MANAGEMENT",
+    headline: "Junior Project Manager",
+    headlineLead: "Yahel Malka",
+    headlineAccent: "Junior Project Manager",
+    professionalTitle: "Computer Science Graduate | Junior Project Manager",
+    subheadline: "Planning, follow-up and technical project work",
+    introduction: "Computer Science graduate with hands-on work building software end to end, plus real experience leading a team of 14 and coordinating operations. I don't have a formal project-manager title yet. I want a junior project role where I can plan work, follow up, and stay close to the technical details.",
+    primaryCta: { label: "View experience", tab: "experience" },
+    secondaryCta: { label: "Projects", tab: "projects" },
+    quickFacts: [
+      { value: "Lead", label: "Team of 14 in the IDF" },
+      { value: "Ops", label: "Requests and follow-up" },
+      { value: "Build", label: "End-to-end projects" }
+    ],
+    skillCategoryOrder: ["professional", "web", "apis", "testing", "tools", "data", "programming"],
+    highlightedCategory: "professional",
+    highlightedSkills: [
+      "Teamwork",
+      "Customer Communication",
+      "Working Under Pressure",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Independent Learning",
+      "Attention to Detail"
+    ],
+    learningSkills: [],
+    projectOrder: ["bin", "rental"],
+    highlightedProjectDetails: {
+      bin: {
+        summary: "A full-stack project where I turned requirements into features, built the system, and checked that the flow worked end to end.",
+        bullets: [
+          "Turned functional requirements into application features and user flows",
+          "Built frontend and backend pieces and connected them through REST APIs",
+          "Managed and checked application data in MySQL",
+          "Tested the full flow and fixed issues across the system"
+        ],
+        tags: ["Requirements", "Coordination", "React.js", "Node.js"]
+      },
+      rental: {
+        summary: "A group software project. I helped turn owner and tenant needs into rental and payment workflows, then tested the result.",
+        bullets: [
+          "Turned owner and tenant requirements into application workflows",
+          "Worked with teammates on design, build and testing",
+          "Integrated frontend pieces with Solidity contracts",
+          "Tested end-to-end workflows and fixed integration issues"
+        ],
+        tags: ["Teamwork", "User Flows", "Testing"]
+      }
+    },
+    focusAreas: ["Project Coordination", "Requirements Analysis", "Prioritization", "Communication"],
+    preferredRoles: ["Junior Project Manager"],
+    contactIntro: "I'm looking for junior project-manager roles in a technical environment.",
+    cvPath: "assets/cv/yahel-malka-project-manager-cv.pdf",
+    cvFilename: "yahel-malka-project-manager-cv.pdf"
   }
 };

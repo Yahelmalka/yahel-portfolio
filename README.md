@@ -111,6 +111,8 @@ git push -u origin main
 | Junior Technical Support | `/technical-support/` | https://Yahelmalka.github.io/yahel-portfolio/technical-support/ |
 | Junior Product Operations | `/product-operations/` | https://Yahelmalka.github.io/yahel-portfolio/product-operations/ |
 | Junior Priority Developer | `/priority-developer/` | https://Yahelmalka.github.io/yahel-portfolio/priority-developer/ |
+| Junior Product Manager | `/product-manager/` | https://Yahelmalka.github.io/yahel-portfolio/product-manager/ |
+| Junior Project Manager | `/project-manager/` | https://Yahelmalka.github.io/yahel-portfolio/project-manager/ |
 
 ## 9. `links.html`
 
