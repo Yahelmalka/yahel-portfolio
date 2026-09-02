@@ -14,11 +14,10 @@ function getRoleId() {
 function getAssetPrefix() {
   if (window.PORTFOLIO_ROLE) return "../";
 
-  const roleId = getRoleId();
-  const path = location.pathname.replace(/\\/g, "/");
-  if (roleId !== "general" && (path.includes(`/${roleId}/`) || path.endsWith(`/${roleId}`))) {
-    return "../";
-  }
+  const parts = location.pathname.replace(/\\/g, "/").split("/").filter((part) => part && part !== "index.html");
+  const last = parts[parts.length - 1];
+  if (!last || last === SITE.repo) return "";
+  if (ROLES[last] || parts.includes(SITE.repo) && last !== SITE.repo) return "../";
   return "";
 }
 
@@ -214,7 +213,6 @@ async function applyCvButton(role) {
   const actions = document.querySelector("[data-bind='actions']");
   if (!actions || !role.cvPath) return;
 
-  // Add the PDF at role.cvPath (see assets/cv/) to show this button.
   const href = asset(role.cvPath);
   const exists = await fileExists(href);
   if (!exists) return;
@@ -229,10 +227,13 @@ async function applyCvButton(role) {
 
 async function fileExists(url) {
   try {
-    const head = await fetch(url, { method: "HEAD" });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 4000);
+    const head = await fetch(url, { method: "HEAD", signal: controller.signal });
+    clearTimeout(timer);
     if (head.ok) return true;
     if (head.status === 405) {
-      const get = await fetch(url, { method: "GET" });
+      const get = await fetch(url, { method: "GET", signal: controller.signal });
       return get.ok;
     }
   } catch (error) {
@@ -252,13 +253,30 @@ function escapeHtml(value) {
 async function ensureShell() {
   if (document.getElementById("home")) return;
 
-  const response = await fetch(asset("index.html"));
-  if (!response.ok) {
-    document.body.insertAdjacentHTML("afterbegin", "<p class='boot-error'>The portfolio could not be loaded.</p>");
+  const candidates = [];
+  if (window.PORTFOLIO_ROLE) candidates.push("../index.html");
+  candidates.push(asset("index.html"));
+
+  let html = "";
+  for (const url of [...new Set(candidates)]) {
+    try {
+      const response = await fetch(url, { cache: "no-cache" });
+      if (!response.ok) continue;
+      const text = await response.text();
+      if (text.includes('id="home"')) {
+        html = text;
+        break;
+      }
+    } catch (error) {
+      /* try the next candidate */
+    }
+  }
+
+  if (!html) {
+    document.body.insertAdjacentHTML("afterbegin", "<p class='boot-error'>The portfolio could not be loaded. Refresh the page.</p>");
     return;
   }
 
-  const html = await response.text();
   const parsed = new DOMParser().parseFromString(html, "text/html");
   parsed.body.querySelectorAll("script").forEach((node) => node.remove());
 
@@ -313,8 +331,8 @@ async function boot() {
   applySkills(role);
   applyExperience(role);
   applyContact(role);
-  await applyCvButton(role);
   initNavigation();
+  applyCvButton(role);
 }
 
 if (typeof ROLES !== "undefined") {
