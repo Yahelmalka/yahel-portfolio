@@ -134,23 +134,34 @@ function renderProject(id, role, index) {
   const tags = details.tags || project.defaultTags;
   const reverse = index % 2 === 1 ? " reverse" : "";
   const featured = index === 0 ? " featured" : "";
-  const main = project.images[0];
-  const thumbs = project.images.slice(1);
+  const images = project.images || [];
+  const main = images[0];
+  const thumbs = images.slice(1);
   const thumbsClass = thumbs.length === 1 ? " thumbs one" : " thumbs";
-
-  return `
-    <article class="project${featured}${reverse} reveal">
-      <div class="gallery">
+  const noMedia = main ? "" : " no-media";
+  const gallery = main
+    ? `<div class="gallery">
         <img class="main-shot" src="${asset(main.src)}" alt="${escapeHtml(main.alt)}">
         ${thumbs.length ? `<div class="${thumbsClass}">${thumbs.map((img) => `<img src="${asset(img.src)}" alt="${escapeHtml(img.alt)}">`).join("")}</div>` : ""}
-      </div>
+      </div>`
+    : `<div class="gallery project-visual">
+        <span>${escapeHtml(project.number)}</span>
+        <b>${escapeHtml(project.title)}</b>
+      </div>`;
+  const repoLink = project.repo
+    ? `<a class="text-link" href="${project.repo}" target="_blank" rel="noreferrer">View repository ↗</a>`
+    : "";
+
+  return `
+    <article class="project${featured}${reverse}${noMedia} reveal">
+      ${gallery}
       <div class="project-copy">
         <span class="number">${escapeHtml(project.number)}</span>
         <h3>${escapeHtml(project.title)}</h3>
         <p>${escapeHtml(summary)}</p>
         <ul>${bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
         <div class="tags">${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
-        <a class="text-link" href="${project.repo}" target="_blank" rel="noreferrer">View repository ↗</a>
+        ${repoLink}
       </div>
     </article>
   `;

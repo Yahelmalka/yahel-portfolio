@@ -36,6 +36,14 @@ const SKILL_CATEGORIES = {
     title: "Networking",
     items: ["TCP/IP", "HTTP/HTTPS", "Client-Server"]
   },
+  ai: {
+    title: "AI & LLM",
+    items: ["AI Agents", "Multi-Agent Systems", "LangChain", "RAG", "OpenAI API", "AI & Automation"]
+  },
+  cloud: {
+    title: "Cloud & DevOps",
+    items: ["Docker", "Railway", "Git"]
+  },
   tools: {
     title: "Tools",
     items: ["Git", "GitHub"]
@@ -94,6 +102,22 @@ const PROJECTS = {
       "Tested success, rejection and invalid-input scenarios"
     ],
     defaultTags: ["Solidity", "React", "Ethers", "MetaMask"]
+  },
+  agents: {
+    id: "agents",
+    number: "03 / AI SYSTEMS",
+    title: "AI Multi-Agent Orchestration System",
+    repo: "",
+    featured: true,
+    images: [],
+    defaultSummary: "An AI-powered multi-agent system, reachable through Telegram and WhatsApp, for managing and executing software development tasks.",
+    defaultBullets: [
+      "Designed Architecture, Builder and Debugging agents with intelligent task routing",
+      "Integrated OpenAI API and LangChain with a RAG-based workflow",
+      "Connected Telegram and WhatsApp bots for remote task submission",
+      "Used Docker for isolated agent execution and deployed the system on Railway"
+    ],
+    defaultTags: ["OpenAI API", "LangChain", "RAG", "Docker", "Railway"]
   }
 };
 
@@ -283,49 +307,63 @@ const ROLES = {
     label: "Junior Full-Stack Developer",
     path: "fullstack/",
     pageTitle: "Yahel Malka | Junior Full-Stack Portfolio",
-    seoDescription: "Yahel Malka. Computer Science graduate with hands-on full-stack project experience in React, Node.js, Express, MySQL and REST APIs.",
+    seoDescription: "Yahel Malka. Computer Science graduate building full-stack apps and AI-powered systems with React, Node.js, OpenAI, LangChain, Docker and Railway.",
     eyebrow: "COMPUTER SCIENCE GRADUATE · FULL STACK",
     headline: "Junior Full-Stack Developer",
     headlineLead: "Yahel Malka",
     headlineAccent: "Junior Full-Stack Developer",
     professionalTitle: "Computer Science Graduate | Junior Full-Stack Developer",
-    subheadline: "React, Node.js, MySQL and end-to-end integration",
-    introduction: "Computer Science graduate who builds React interfaces, Node.js and Express APIs, and MySQL data, then connects the pieces and debugs them as one system.",
+    subheadline: "Full-stack apps, APIs and AI-powered systems",
+    introduction: "Computer Science graduate with hands-on work building full-stack applications and AI-powered systems in JavaScript, Python, React.js, Node.js, REST APIs and LLM tools. I integrate OpenAI, LangChain and RAG, containerize work with Docker, and deploy to Railway.",
     primaryCta: { label: "View full-stack work", tab: "projects" },
     secondaryCta: { label: "GitHub ↗", href: "https://github.com/Yahelmalka" },
     quickFacts: [
-      { value: "React", label: "Interface development" },
-      { value: "Node.js", label: "Express REST APIs" },
-      { value: "MySQL", label: "Data & integration" }
+      { value: "React", label: "Node.js · Express · MySQL" },
+      { value: "AI", label: "OpenAI · LangChain · RAG" },
+      { value: "Cloud", label: "Docker · Railway" }
     ],
-    skillCategoryOrder: ["web", "apis", "programming", "testing", "tools", "data", "professional"],
-    highlightedCategory: "web",
-    highlightedSkills: ["React.js", "JavaScript", "Node.js", "Express.js", "MySQL", "REST APIs", "HTML5", "CSS3", "Git", "Debugging"],
+    skillCategoryOrder: ["web", "ai", "apis", "cloud", "programming", "testing", "professional"],
+    highlightedCategory: "ai",
+    highlightedSkills: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "OpenAI API",
+      "LangChain",
+      "RAG",
+      "Multi-Agent Systems",
+      "Docker",
+      "Railway",
+      "JavaScript",
+      "Python",
+      "MySQL"
+    ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin"],
     highlightedProjectDetails: {
-      bin: {
-        summary: "A full-stack platform I designed and developed end to end: React UI, Node.js/Express APIs, MySQL records and map-based collection workflows.",
+      agents: {
+        summary: "An AI-powered multi-agent system, reachable through Telegram and WhatsApp, for managing and executing software development tasks.",
         bullets: [
-          "Built responsive React interfaces and interactive map workflows",
-          "Developed REST APIs with Node.js and Express",
-          "Designed and managed MySQL records for bins, locations and routes",
-          "Connected front end and back end, then debugged issues across both"
+          "Designed Architecture, Builder and Debugging agents with intelligent task routing",
+          "Integrated OpenAI API and LangChain with a RAG-based workflow",
+          "Connected Telegram and WhatsApp bots for remote task submission",
+          "Used Docker for isolated agent execution and deployed the system on Railway"
         ],
-        tags: ["React.js", "Node.js", "Express.js", "MySQL", "REST APIs", "Git"]
+        tags: ["OpenAI API", "LangChain", "RAG", "Docker", "Railway"]
       },
-      rental: {
-        summary: "A React application integrated with Solidity contracts, Ethers and MetaMask for deploy, sign, lock and payment flows.",
+      bin: {
+        summary: "An end-to-end web application that connects frontend, backend, REST APIs and MySQL. I turned requirements into features and checked the full flow.",
         bullets: [
-          "Built the application interface and front-end/back-end interaction flows",
-          "Created Solidity smart contracts for owners and tenants",
-          "Integrated Ethers and MetaMask for signing and transactions",
-          "Debugged and validated interactions between UI and contracts"
+          "Turned functional requirements into application features and user flows",
+          "Designed and implemented frontend and backend functionality",
+          "Connected the system through REST APIs and checked MySQL data flows",
+          "Tested end-to-end functionality and fixed issues across the system"
         ],
-        tags: ["React.js", "Solidity", "Ethers", "MetaMask"]
+        tags: ["React.js", "Node.js", "REST APIs", "MySQL"]
       }
     },
-    focusAreas: ["React.js", "Node.js", "Express.js", "MySQL", "REST APIs", "Debugging"],
+    focusAreas: ["React.js", "Node.js", "OpenAI API", "LangChain", "Docker", "Railway"],
     preferredRoles: ["Junior Full-Stack Developer"],
     contactIntro: "I'm looking for junior full-stack roles.",
     cvPath: "assets/cv/yahel-malka-fullstack-cv.pdf",
