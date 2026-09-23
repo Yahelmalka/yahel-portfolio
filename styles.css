@@ -744,6 +744,15 @@ button:focus-visible {
 
 .links-table tr:last-child td { border-bottom: 0; }
 
+.links-table td code {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.links-table td > div {
+  margin-top: 6px;
+}
+
 .links-table code {
   font-size: 12px;
   background: rgba(173, 128, 80, 0.08);

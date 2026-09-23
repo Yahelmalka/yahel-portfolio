@@ -983,6 +983,7 @@ const ROLES = {
     id: "ai-engineer",
     label: "Junior AI Solution Engineer",
     path: "ai-engineer/",
+    aliases: ["ai/"],
     pageTitle: "Yahel Malka | Junior AI Solution Engineer Portfolio",
     seoDescription: "Yahel Malka. Computer Science graduate with Python, SQL, data analysis and an AI Business Analytics course, looking for a junior AI solutions role.",
     eyebrow: "COMPUTER SCIENCE GRADUATE · AI SOLUTIONS",
