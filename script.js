@@ -117,6 +117,11 @@ function createCta(cta, className) {
 }
 
 function applyProjects(role) {
+  const intro = document.querySelector("[data-bind='projects-intro']");
+  if (intro) {
+    intro.textContent = role.projectsIntro || "A waste-bin platform, a rental DApp and an AI multi-agent system. I built, tested and debugged them.";
+  }
+
   const list = document.querySelector("[data-bind='projects']");
   if (!list) return;
 

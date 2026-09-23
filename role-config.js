@@ -129,26 +129,26 @@ const ROLES = {
     label: "General Technology",
     path: "",
     pageTitle: "Yahel Malka | QA & Software Portfolio",
-    seoDescription: "Yahel Malka. Computer Science graduate with hands-on project experience in software development, QA, APIs and full-stack systems.",
+    seoDescription: "Yahel Malka. Computer Science graduate with hands-on project experience in software development, QA, APIs, full-stack systems and AI multi-agent work.",
     eyebrow: "COMPUTER SCIENCE GRADUATE · QA & SOFTWARE",
     headline: "Yahel Malka",
     headlineLead: "Yahel",
     headlineAccent: "Malka.",
     professionalTitle: "Computer Science Graduate | QA & Software",
     subheadline: "Software, testing and technical problem-solving",
-    introduction: "I'm Yahel Malka, a Computer Science graduate. I build software, test it and debug it when something doesn't work as expected.",
+    introduction: "I'm Yahel Malka, a Computer Science graduate. I build software, including full-stack apps and an AI multi-agent system, then test it and debug it when something doesn't work as expected.",
     primaryCta: { label: "Explore my work", tab: "projects" },
     secondaryCta: { label: "GitHub ↗", href: "https://github.com/Yahelmalka" },
     quickFacts: [
       { value: "B.Sc.", label: "Computer Science" },
       { value: "QA", label: "Manual & API Testing" },
-      { value: "Full Stack", label: "React · Node · MySQL" }
+      { value: "AI", label: "Agents · LangChain · RAG" }
     ],
-    skillCategoryOrder: DEFAULT_SKILL_ORDER,
+    skillCategoryOrder: ["programming", "web", "ai", "testing", "apis", "data", "tools", "professional"],
     highlightedCategory: "testing",
     highlightedSkills: ["Manual Testing", "API Testing", "Postman", "React.js", "Node.js", "MySQL"],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {},
     focusAreas: ["Quality Assurance", "Full-Stack Development", "APIs & Debugging"],
     preferredRoles: ["Junior QA", "Junior Software", "Technical roles"],
@@ -192,8 +192,18 @@ const ROLES = {
       "Analytical Thinking"
     ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "An AI multi-agent system I checked end to end: task routing between agents, bot submissions, and the path from a request to execution.",
+        bullets: [
+          "Checked how Architecture, Builder and Debugging agents receive and route tasks",
+          "Validated Telegram and WhatsApp submission flows",
+          "Looked at OpenAI API and LangChain RAG interactions when something failed",
+          "Debugged issues across isolated Docker execution and the deployed Railway setup"
+        ],
+        tags: ["E2E Testing", "Debugging", "API Testing"]
+      },
       bin: {
         summary: "A full-stack waste-bin platform that I built, tested and debugged across the React interface, Node.js APIs, MySQL data and map-based collection workflows.",
         bullets: [
@@ -265,8 +275,18 @@ const ROLES = {
       "Analytical Thinking"
     ],
     learningSkills: ["Real-Time Systems", "Hardware-Software Integration"],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "A multi-layer AI system: bots, task routing, LangChain RAG, isolated Docker agents and a Railway deploy. I followed how a request moves through those layers.",
+        bullets: [
+          "Followed a task from Telegram or WhatsApp through routing to the right agent",
+          "Checked how Architecture, Builder and Debugging agents work as one system",
+          "Looked at OpenAI API and RAG retrieval when the flow broke",
+          "Traced failures across Docker isolation and the deployed Railway services"
+        ],
+        tags: ["System Testing", "E2E Testing", "Debugging"]
+      },
       bin: {
         summary: "An end-to-end client-server system where I validated how fill-level data, bin records and map routes move between the React client, REST APIs and MySQL.",
         bullets: [
@@ -394,8 +414,18 @@ const ROLES = {
     highlightedCategory: "web",
     highlightedSkills: ["React.js", "JavaScript", "HTML5", "CSS3", "REST APIs", "Debugging"],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "Telegram and WhatsApp are the user-facing channels. People send a task remotely, and the system routes it to the right agent.",
+        bullets: [
+          "Connected Telegram and WhatsApp bots for remote task submission",
+          "Kept the user path simple: send a request, get it to the right agent",
+          "Worked with Architecture, Builder and Debugging agents behind those chats",
+          "Checked that the bot-to-agent flow still worked after deploy"
+        ],
+        tags: ["Telegram", "WhatsApp", "User Flows"]
+      },
       bin: {
         summary: "A React interface for monitoring bins, managing locations and planning collection routes on an interactive map. Built to work on different screen sizes.",
         bullets: [
@@ -444,12 +474,22 @@ const ROLES = {
       { value: "MySQL", label: "SQL & data management" },
       { value: "Postman", label: "API testing" }
     ],
-    skillCategoryOrder: ["apis", "programming", "web", "testing", "tools", "professional", "data"],
+    skillCategoryOrder: ["apis", "ai", "cloud", "programming", "web", "testing", "tools", "professional"],
     highlightedCategory: "apis",
     highlightedSkills: ["Node.js", "Express.js", "MySQL", "SQL", "REST APIs", "JSON", "Postman", "API Testing", "Debugging"],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "The back end of an AI system: OpenAI API, LangChain, RAG retrieval, task routing, Docker isolation and a Railway deploy.",
+        bullets: [
+          "Designed Architecture, Builder and Debugging agents with intelligent task routing",
+          "Integrated OpenAI API and LangChain with a RAG-based workflow",
+          "Containerized agent execution with Docker",
+          "Deployed the multi-agent system and messaging bots on Railway"
+        ],
+        tags: ["OpenAI API", "LangChain", "Docker", "Railway"]
+      },
       bin: {
         summary: "The back end of a waste-bin platform: Node.js and Express REST APIs, MySQL records, and JSON exchanges with the React client.",
         bullets: [
@@ -498,12 +538,22 @@ const ROLES = {
       { value: "CS", label: "Data structures & OOP" },
       { value: "Git", label: "Build & debug" }
     ],
-    skillCategoryOrder: ["programming", "web", "apis", "testing", "tools", "professional", "data"],
+    skillCategoryOrder: ["programming", "ai", "web", "apis", "cloud", "testing", "tools", "professional"],
     highlightedCategory: "programming",
     highlightedSkills: ["Python", "JavaScript", "C", "SQL", "Git", "Debugging", "Problem Solving"],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "An AI-powered software system with specialized agents, API integrations, Docker and a cloud deploy. I designed it, connected the pieces and got it running.",
+        bullets: [
+          "Designed Architecture, Builder and Debugging agents with intelligent task routing",
+          "Integrated OpenAI API and LangChain with a RAG-based workflow",
+          "Connected Telegram and WhatsApp bots for remote task submission",
+          "Used Docker for isolated execution and deployed the system on Railway"
+        ],
+        tags: ["Python", "LangChain", "Docker", "Problem Solving"]
+      },
       bin: {
         summary: "A complete software system with an interface, APIs, a database and map logic. I designed, implemented and debugged it as one product.",
         bullets: [
@@ -556,8 +606,18 @@ const ROLES = {
     highlightedCategory: "data",
     highlightedSkills: ["SQL", "Excel", "Tableau", "Data Analysis", "MySQL", "Analytical Thinking", "Attention to Detail"],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "A RAG-based workflow that retrieves context before the LLM answers. Task routing decides which agent handles the request.",
+        bullets: [
+          "Used a RAG-based workflow for contextual retrieval and LLM interactions",
+          "Routed tasks to Architecture, Builder or Debugging agents",
+          "Followed how a submitted request becomes structured work for an agent",
+          "Checked that retrieved context and agent output stayed aligned"
+        ],
+        tags: ["RAG", "LangChain", "Data Analysis"]
+      },
       bin: {
         summary: "A MySQL-backed platform that stores bin locations and fill-level records and uses that data to support collection-route planning on a map.",
         bullets: [
@@ -620,8 +680,18 @@ const ROLES = {
       "Independent Learning"
     ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "A multi-layer AI system with a dedicated Debugging agent. I traced failures from a bot message through routing, RAG and isolated Docker execution.",
+        bullets: [
+          "Reproduced issues submitted through Telegram and WhatsApp",
+          "Traced a failure through task routing to the Debugging agent",
+          "Checked OpenAI API and LangChain RAG steps when the answer was wrong",
+          "Looked at Docker isolation and the Railway deploy when the service failed"
+        ],
+        tags: ["Troubleshooting", "Debugging", "Issue Reproduction"]
+      },
       bin: {
         summary: "A multi-layer application where I reproduced and fixed issues across the React UI, REST APIs and MySQL. This is the same path a support investigation often follows.",
         bullets: [
@@ -689,8 +759,18 @@ const ROLES = {
       "Independent Learning"
     ],
     learningSkills: ["AI-powered tools"],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "A remote request process: a task comes in through Telegram or WhatsApp, gets routed to the right agent, and runs in an isolated environment.",
+        bullets: [
+          "Set up Telegram and WhatsApp as the intake channels for tasks",
+          "Routed each request to Architecture, Builder or Debugging agents",
+          "Kept agent execution isolated in Docker",
+          "Deployed the process to Railway so it could run outside a local machine"
+        ],
+        tags: ["Process Monitoring", "Coordination"]
+      },
       bin: {
         summary: "A live view of bins, fill levels and collection routes. The work depends on accurate configuration, reliable data and a process that is easy to follow.",
         bullets: [
@@ -759,8 +839,18 @@ const ROLES = {
       "Software Troubleshooting"
     ],
     learningSkills: ["Priority"],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "A connected system: incoming requests, API calls to OpenAI, RAG retrieval, isolated Docker agents and a Railway deploy.",
+        bullets: [
+          "Routed incoming tasks to specialized agents through one process",
+          "Integrated OpenAI API and LangChain as the system layer",
+          "Isolated agent execution with Docker",
+          "Deployed the connected services on Railway"
+        ],
+        tags: ["System Integration", "APIs", "Docker"]
+      },
       bin: {
         summary: "A business workflow for bins, locations and collection routes. The data is stored in MySQL, exposed through APIs and used through an operational interface.",
         bullets: [
@@ -822,8 +912,18 @@ const ROLES = {
       "Independent Learning"
     ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "A product for sending software tasks through Telegram or WhatsApp. Specialized agents handle architecture, building and debugging.",
+        bullets: [
+          "Turned the need to submit and run development tasks into an agent workflow",
+          "Designed Architecture, Builder and Debugging agents with intelligent task routing",
+          "Used Telegram and WhatsApp as the user-facing channels",
+          "Checked the full path from a submitted request to agent execution"
+        ],
+        tags: ["User Flows", "AI Agents", "Requirements"]
+      },
       bin: {
         summary: "A waste-bin platform where I turned functional needs into features: bin data, locations, fill levels and collection routes.",
         bullets: [
@@ -884,8 +984,18 @@ const ROLES = {
       "Attention to Detail"
     ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "An end-to-end AI project: specialized agents, messaging channels, Docker and a Railway deploy. I planned the pieces and got them running together.",
+        bullets: [
+          "Designed Architecture, Builder and Debugging agents and how work is routed between them",
+          "Connected Telegram and WhatsApp so tasks can be submitted remotely",
+          "Used Docker to isolate agent execution",
+          "Deployed the system and bots to Railway"
+        ],
+        tags: ["Coordination", "AI Agents", "Railway"]
+      },
       bin: {
         summary: "A full-stack project where I turned requirements into features, built the system, and checked that the flow worked end to end.",
         bullets: [
@@ -949,8 +1059,18 @@ const ROLES = {
       "Attention to Detail"
     ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "An AI system with isolated Docker execution and external API calls. I checked how bots, agents and the cloud deploy connect, and where a failure can start.",
+        bullets: [
+          "Used Docker to isolate agent execution from the rest of the system",
+          "Checked OpenAI API and LangChain integrations when a request failed",
+          "Traced a Telegram or WhatsApp submission through task routing",
+          "Looked at the Railway deploy when a service did not stay up"
+        ],
+        tags: ["Docker", "Troubleshooting", "Debugging"]
+      },
       bin: {
         summary: "An end-to-end application where I checked how the interface, REST APIs and MySQL stay in sync, then found and fixed failures across those layers.",
         bullets: [
@@ -985,38 +1105,48 @@ const ROLES = {
     path: "ai-engineer/",
     aliases: ["ai/"],
     pageTitle: "Yahel Malka | Junior AI Solution Engineer Portfolio",
-    seoDescription: "Yahel Malka. Computer Science graduate with Python, SQL, data analysis and an AI Business Analytics course, looking for a junior AI solutions role.",
+    seoDescription: "Yahel Malka. Computer Science graduate building AI-powered multi-agent systems with OpenAI, LangChain, RAG, Docker and Railway.",
     eyebrow: "COMPUTER SCIENCE GRADUATE · AI SOLUTIONS",
     headline: "Junior AI Solution Engineer",
     headlineLead: "Yahel Malka",
     headlineAccent: "Junior AI Solution Engineer",
     professionalTitle: "Computer Science Graduate | Junior AI Solution Engineer",
-    subheadline: "Python, data analysis and reliable software",
-    introduction: "Computer Science graduate with project work in Python, SQL, APIs and end-to-end testing, plus an HIT AI Business Analytics course. I don't have a formal AI-engineer title yet. I want to grow in a junior AI solutions role using the same work: understanding data, building software, and checking that a flow is reliable.",
+    subheadline: "Multi-agent systems, LangChain and RAG",
+    introduction: "Computer Science graduate with hands-on work building an AI-powered multi-agent system using OpenAI, LangChain and RAG, plus an HIT AI Business Analytics course. I don't have a formal AI-engineer title yet. I want to grow in a junior AI solutions role using the same work: routing tasks to specialized agents, retrieving context, and checking that the flow is reliable.",
     primaryCta: { label: "View relevant work", tab: "projects" },
     secondaryCta: { label: "Skills dashboard", tab: "skills" },
     quickFacts: [
-      { value: "Python", label: "SQL · data work" },
-      { value: "HIT", label: "AI Business Analytics" },
-      { value: "Build", label: "APIs · testing · debug" }
+      { value: "Agents", label: "Architecture · Builder · Debug" },
+      { value: "LLM", label: "OpenAI · LangChain · RAG" },
+      { value: "Cloud", label: "Docker · Railway" }
     ],
-    skillCategoryOrder: ["programming", "data", "apis", "testing", "web", "professional", "tools"],
-    highlightedCategory: "data",
+    skillCategoryOrder: ["ai", "programming", "cloud", "data", "apis", "testing", "professional"],
+    highlightedCategory: "ai",
     highlightedSkills: [
+      "AI Agents",
+      "Multi-Agent Systems",
+      "LangChain",
+      "RAG",
+      "OpenAI API",
       "Python",
-      "SQL",
-      "Data Analysis",
-      "Excel",
-      "Tableau",
-      "Data Visualization",
-      "REST APIs",
-      "Debugging",
+      "Docker",
+      "Railway",
       "Problem Solving",
-      "Analytical Thinking"
+      "Debugging"
     ],
     learningSkills: [],
-    projectOrder: ["bin", "rental"],
+    projectOrder: ["agents", "bin", "rental"],
     highlightedProjectDetails: {
+      agents: {
+        summary: "An AI-powered multi-agent system, reachable through Telegram and WhatsApp, for managing and executing software development tasks.",
+        bullets: [
+          "Designed Architecture, Builder and Debugging agents with intelligent task routing",
+          "Integrated OpenAI API and LangChain with a RAG-based workflow",
+          "Connected Telegram and WhatsApp bots for remote task submission",
+          "Used Docker for isolated agent execution and deployed the system on Railway"
+        ],
+        tags: ["OpenAI API", "LangChain", "RAG", "Docker", "Railway"]
+      },
       bin: {
         summary: "A full-stack application where I connected React, Node.js, REST APIs and MySQL, then checked the data flow and fixed issues across those layers.",
         bullets: [
